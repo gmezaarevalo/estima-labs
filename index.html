@@ -1396,261 +1396,6 @@
             .nav-links { display: none; }
             .showcase-inner-body { padding: 22px 18px; }
         }
-    
-        /* ========================================================
-           MODO ESTUDIO PRIVADO: ORGANIZADOR VISUAL Y COLOR STUDIO
-           ======================================================== */
-        .admin-studio-btn {
-            position: fixed;
-            bottom: 24px;
-            left: 24px;
-            z-index: 9999;
-            background: #1C1917;
-            color: #FFFFFF;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px 18px;
-            border-radius: var(--radius-pill);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-            display: none; /* Solo visible con ?admin=1 */
-            align-items: center;
-            gap: 8px;
-            transition: all 0.25s var(--ease);
-        }
-
-        .admin-studio-btn:hover {
-            transform: translateY(-2px);
-            background: var(--accent-bronze);
-        }
-
-        .admin-studio-drawer {
-            position: fixed;
-            top: 0;
-            left: -380px;
-            width: 360px;
-            height: 100vh;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            border-right: 1px solid var(--border-hairline);
-            z-index: 10000;
-            box-shadow: 10px 0 35px rgba(28, 25, 23, 0.12);
-            padding: 24px 22px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-            overflow-y: auto;
-        }
-
-        .admin-studio-drawer.open {
-            left: 0;
-        }
-
-        .studio-top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 14px;
-            border-bottom: 1px solid var(--border-hairline);
-            margin-bottom: 18px;
-        }
-
-        .studio-logo-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 800;
-            color: var(--text-primary);
-        }
-
-        .studio-badge-priv {
-            font-size: 0.68rem;
-            font-weight: 700;
-            background: #E8E2D9;
-            color: var(--text-primary);
-            padding: 2px 8px;
-            border-radius: var(--radius-pill);
-        }
-
-        .studio-btn-close {
-            background: transparent;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            color: var(--text-secondary);
-            padding: 4px;
-        }
-
-        .studio-section-title {
-            font-size: 0.76rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-tertiary);
-            margin: 16px 0 10px;
-        }
-
-        .studio-sec-list {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .studio-sec-item {
-            background: var(--bg-canvas);
-            border: 1px solid var(--border-hairline);
-            border-radius: 10px;
-            padding: 10px 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.2s var(--ease);
-        }
-
-        .studio-sec-item:hover {
-            border-color: var(--accent-sand-pastel);
-            background: #FFFFFF;
-        }
-
-        .studio-sec-name {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .studio-sec-actions {
-            display: flex;
-            gap: 4px;
-        }
-
-        .studio-btn-move {
-            background: #FFFFFF;
-            border: 1px solid var(--border-hairline);
-            width: 26px;
-            height: 26px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.15s ease;
-        }
-
-        .studio-btn-move:hover {
-            background: var(--accent-bronze);
-            color: #FFFFFF;
-            border-color: var(--accent-bronze);
-        }
-
-        .studio-color-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .studio-palette-btn {
-            background: var(--bg-canvas);
-            border: 1px solid var(--border-hairline);
-            padding: 8px 10px;
-            border-radius: 8px;
-            font-size: 0.74rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s var(--ease);
-        }
-
-        .studio-palette-btn:hover {
-            border-color: var(--text-primary);
-        }
-
-        .palette-swatch {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-        }
-
-        .studio-color-picker-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--bg-canvas);
-            border: 1px solid var(--border-hairline);
-            border-radius: 8px;
-            padding: 6px 12px;
-            margin-top: 8px;
-        }
-
-        .studio-color-picker-row label {
-            font-size: 0.76rem;
-            font-weight: 700;
-            color: var(--text-secondary);
-        }
-
-        .studio-color-picker-row input[type="color"] {
-            border: none;
-            width: 28px;
-            height: 28px;
-            border-radius: 6px;
-            cursor: pointer;
-            background: transparent;
-        }
-
-        .studio-footer-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            padding-top: 14px;
-            border-top: 1px solid var(--border-hairline);
-            margin-top: 16px;
-        }
-
-        .studio-btn-save {
-            background: var(--accent-bronze);
-            color: #FFFFFF;
-            border: none;
-            padding: 10px 14px;
-            border-radius: var(--radius-pill);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 800;
-            cursor: pointer;
-            box-shadow: 0 4px 14px var(--accent-bronze-glow);
-            transition: all 0.2s var(--ease);
-        }
-
-        .studio-btn-save:hover {
-            transform: translateY(-1px);
-        }
-
-        .studio-btn-reset {
-            background: transparent;
-            color: var(--text-tertiary);
-            border: 1px solid var(--border-hairline);
-            padding: 8px 14px;
-            border-radius: var(--radius-pill);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.76rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s var(--ease);
-        }
-
-        .studio-btn-reset:hover {
-            color: var(--text-primary);
-            border-color: var(--text-primary);
-        }
-
     </style>
 </head>
 <body>
@@ -1695,40 +1440,33 @@
         </div>
     </header>
 
-    <!-- CONTENEDOR MODULAR REORDENABLE -->
-    <main id="modularFlow">
-
-        <!-- 1. PORTADA HERO -->
-        <section class="modular-block hero-monumental" id="mod-hero" data-sec-title="1. Portada Monumental">
-            <div class="container">
-                <div class="hero-kicker-seal">
-                    <span class="seal-dot"></span>
-                    <span>Oficina técnica con IA · Medidas exactas y respuesta en 1 hora</span>
-                </div>
-
-                <h1 class="hero-title-giant">
-                    Tus presupuestos de obra listos en <span class="sand-highlight">60 minutos</span>.
-                </h1>
-
-                <p class="hero-lead-text">
-                    Envíanos tus planos por WhatsApp. En una hora recibes tu presupuesto en Excel con medidas exactas, precios del día en Lima y tu ganancia 100% protegida.
-                </p>
-
-                <div class="hero-cta-group">
-                    <a href="https://wa.me/51995554446?text=Hola%20ESTIMA%20LABS,%20tengo%20un%20plano%20para%20probar%20el%20Piloto%20Gratis." class="btn-hero-primary" target="_blank">
-                        Pedir presupuesto gratis (S/ 0) ✨
-                    </a>
-                    <a href="#entregables" class="btn-hero-ghost">
-                        Explorar expediente en vivo 👇
-                    </a>
-                </div>
+    <!-- 3. PORTADA MONUMENTAL DE MÁXIMO IMPACTO -->
+    <section class="hero-monumental">
+        <div class="container">
+            <div class="hero-kicker-seal">
+                <span class="seal-dot"></span>
+                <span>Oficina técnica con IA · Medidas exactas y respuesta en 1 hora</span>
             </div>
-        </section>
 
-        <!-- 2. MUESTRA DE EXPEDIENTE (DOSSIER & PLANOS) -->
-        <section class="modular-block" id="mod-showcase" data-sec-title="2. Muestra de Expediente (Dossier & Planos)" style="padding-bottom:50px;">
-            <div class="container">
-                <div class="showcase-window" id="entregables">
+            <h1 class="hero-title-giant">
+                Tus presupuestos de obra listos en <span class="sand-highlight">60 minutos</span>.
+            </h1>
+
+            <p class="hero-lead-text">
+                Envíanos tus planos por WhatsApp. En una hora recibes tu presupuesto en Excel con medidas exactas, precios del día en Lima y tu ganancia 100% protegida.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="https://wa.me/51995554446?text=Hola%20ESTIMA%20LABS,%20tengo%20un%20plano%20para%20probar%20el%20Piloto%20Gratis." class="btn-hero-primary" target="_blank">
+                    Pedir presupuesto gratis (S/ 0) ✨
+                </a>
+                <a href="#entregables" class="btn-hero-ghost">
+                    Explorar expediente en vivo 👇
+                </a>
+            </div>
+
+            <!-- 4. EL "SHOWCASE DOCK": MUESTRA EDITORIAL DE LUJO DEL EXPEDIENTE QUE RECIBES -->
+            <div class="showcase-window" id="entregables">
                 <!-- CABECERA ATELIER DE ARQUITECTURA -->
                 <div class="showcase-chrome-bar">
                     <div class="atelier-header-left">
@@ -1762,8 +1500,8 @@
         </div>
     </section>
 
-    <!-- 3. CÓMO FUNCIONA EN 3 PASOS SIMPLES -->
-    <section class="modular-block process-strip-section" id="proceso" data-sec-title="3. Proceso en 3 Pasos">
+    <!-- 5. CÓMO FUNCIONA EN 3 PASOS SIMPLES -->
+    <section class="process-strip-section" id="proceso">
         <div class="container">
             <div class="process-3-grid">
                 <div class="process-step-card">
@@ -1791,8 +1529,8 @@
         </div>
     </section>
 
-    <!-- 4. COMPARATIVA: PAZ MENTAL FRENTE AL ESTRÉS -->
-    <section class="modular-block contrast-section" id="comparativa" data-sec-title="4. Comparativa de Mercado">
+    <!-- 6. COMPARATIVA: PAZ MENTAL FRENTE AL ESTRÉS -->
+    <section class="contrast-section" id="comparativa">
         <div class="container">
             <div class="section-header">
                 <span class="section-pill-tag">Paz mental</span>
@@ -1825,8 +1563,8 @@
         </div>
     </section>
 
-    <!-- 5. TARIFAS TRANSPARENTES -->
-    <section class="modular-block pricing-section" id="tarifas" data-sec-title="5. Tarifas y Precios">
+    <!-- 7. TARIFAS TRANSPARENTES -->
+    <section class="pricing-section" id="tarifas">
         <div class="container">
             <div class="section-header">
                 <span class="section-pill-tag">Tarifas transparentes</span>
@@ -1888,8 +1626,6 @@
             </div>
         </div>
     </section>
-
-    </main> <!-- FIN DE MODULAR FLOW -->
 
     <!-- 8. FOOTER -->
     <footer>
@@ -2325,208 +2061,6 @@
         renderDeliverable();
     </script>
 
-
-
-    <!-- ========================================================
-         MODO ESTUDIO PRIVADO (SOLO VISIBLE CON ?admin=1)
-         ======================================================== -->
-    <button class="admin-studio-btn" id="btnAdminTrigger" onclick="toggleAdminStudio()">
-        <span>⚙️</span>
-        <span>Estudio Visual (Admin)</span>
-    </button>
-
-    <div class="admin-studio-drawer" id="adminStudioDrawer">
-        <div>
-            <div class="studio-top-bar">
-                <div>
-                    <span class="studio-logo-title">Estudio de Diseño</span>
-                    <span class="studio-badge-priv">Privado</span>
-                </div>
-                <button class="studio-btn-close" onclick="toggleAdminStudio()">✕</button>
-            </div>
-
-            <!-- REORDENAMIENTO DE SECCIONES -->
-            <div class="studio-section-title">Reordenar Secciones Visualmente</div>
-            <div class="studio-sec-list" id="studioSecList">
-                <!-- Se llena dinámicamente con JS -->
-            </div>
-
-            <!-- PALETAS DE COLOR -->
-            <div class="studio-section-title">Paletas de Color de Lujo</div>
-            <div class="studio-color-grid">
-                <button class="studio-palette-btn" onclick="applyPreset('#9A5B32', '#FAF8F5')">
-                    <span class="palette-swatch" style="background:#9A5B32;"></span>
-                    <span>Bronce</span>
-                </button>
-                <button class="studio-palette-btn" onclick="applyPreset('#B85D38', '#F9F5F0')">
-                    <span class="palette-swatch" style="background:#B85D38;"></span>
-                    <span>Terracota</span>
-                </button>
-                <button class="studio-palette-btn" onclick="applyPreset('#3B6955', '#F5F7F5')">
-                    <span class="palette-swatch" style="background:#3B6955;"></span>
-                    <span>Salvia</span>
-                </button>
-                <button class="studio-palette-btn" onclick="applyPreset('#3A3836', '#FAF9F7')">
-                    <span class="palette-swatch" style="background:#3A3836;"></span>
-                    <span>Carbón</span>
-                </button>
-            </div>
-
-            <!-- SELECTORES PERSONALIZADOS -->
-            <div class="studio-color-picker-row">
-                <label>Color de Acento:</label>
-                <input type="color" id="pickerAccent" value="#9A5B32" onchange="setCustomAccent(this.value)">
-            </div>
-            <div class="studio-color-picker-row">
-                <label>Tono de Fondo:</label>
-                <input type="color" id="pickerBg" value="#FAF8F5" onchange="setCustomBg(this.value)">
-            </div>
-        </div>
-
-        <div class="studio-footer-actions">
-            <button class="studio-btn-save" onclick="copyStudioConfig()">📋 Copiar Mi Diseño</button>
-            <button class="studio-btn-reset" onclick="resetStudioConfig()">🔄 Restablecer Original</button>
-        </div>
-    </div>
-
-    <!-- SCRIPT DE CONTROL DEL MODO ESTUDIO -->
-    <script>
-        const isAdminMode = window.location.search.includes('admin=1') || 
-                            window.location.search.includes('studio=true') || 
-                            localStorage.getItem('estima_admin') === '1';
-
-        if (isAdminMode) {
-            localStorage.setItem('estima_admin', '1');
-            const btn = document.getElementById('btnAdminTrigger');
-            if (btn) btn.style.display = 'inline-flex';
-        }
-
-        // Atajo de teclado: Ctrl + Shift + E
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'e') {
-                localStorage.setItem('estima_admin', '1');
-                const btn = document.getElementById('btnAdminTrigger');
-                if (btn) btn.style.display = 'inline-flex';
-                toggleAdminStudio();
-            }
-        });
-
-        function toggleAdminStudio() {
-            const drawer = document.getElementById('adminStudioDrawer');
-            drawer.classList.toggle('open');
-            renderStudioSections();
-        }
-
-        function renderStudioSections() {
-            const flow = document.getElementById('modularFlow');
-            const list = document.getElementById('studioSecList');
-            if (!flow || !list) return;
-
-            const blocks = Array.from(flow.children);
-            list.innerHTML = blocks.map((block, i) => {
-                const title = block.getAttribute('data-sec-title') || block.id;
-                return `
-                    <div class="studio-sec-item">
-                        <span class="studio-sec-name">${title}</span>
-                        <div class="studio-sec-actions">
-                            <button class="studio-btn-move" onclick="moveBlock(${i}, -1)" ${i === 0 ? 'disabled style="opacity:0.3;"' : ''}>▲</button>
-                            <button class="studio-btn-move" onclick="moveBlock(${i}, 1)" ${i === blocks.length - 1 ? 'disabled style="opacity:0.3;"' : ''}>▼</button>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function moveBlock(index, direction) {
-            const flow = document.getElementById('modularFlow');
-            const blocks = Array.from(flow.children);
-            const targetIndex = index + direction;
-
-            if (targetIndex < 0 || targetIndex >= blocks.length) return;
-
-            if (direction === -1) {
-                flow.insertBefore(blocks[index], blocks[targetIndex]);
-            } else {
-                flow.insertBefore(blocks[targetIndex], blocks[index]);
-            }
-
-            renderStudioSections();
-            saveOrderToStorage();
-        }
-
-        function saveOrderToStorage() {
-            const flow = document.getElementById('modularFlow');
-            const order = Array.from(flow.children).map(b => b.id);
-            localStorage.setItem('estima_order', JSON.stringify(order));
-        }
-
-        function loadOrderFromStorage() {
-            const saved = localStorage.getItem('estima_order');
-            if (!saved) return;
-            try {
-                const order = JSON.parse(saved);
-                const flow = document.getElementById('modularFlow');
-                order.forEach(id => {
-                    const el = document.getElementById(id);
-                    if (el) flow.appendChild(el);
-                });
-            } catch(e) {}
-        }
-
-        function applyPreset(accent, bg) {
-            document.documentElement.style.setProperty('--accent-bronze', accent);
-            document.documentElement.style.setProperty('--bg-canvas', bg);
-            document.getElementById('pickerAccent').value = accent;
-            document.getElementById('pickerBg').value = bg;
-            localStorage.setItem('estima_accent', accent);
-            localStorage.setItem('estima_bg', bg);
-        }
-
-        function setCustomAccent(color) {
-            document.documentElement.style.setProperty('--accent-bronze', color);
-            localStorage.setItem('estima_accent', color);
-        }
-
-        function setCustomBg(color) {
-            document.documentElement.style.setProperty('--bg-canvas', color);
-            localStorage.setItem('estima_bg', color);
-        }
-
-        function copyStudioConfig() {
-            const flow = document.getElementById('modularFlow');
-            const order = Array.from(flow.children).map(b => b.getAttribute('data-sec-title'));
-            const accent = localStorage.getItem('estima_accent') || '#9A5B32';
-            const bg = localStorage.getItem('estima_bg') || '#FAF8F5';
-
-            const summary = `Mi Configuración Estima Labs:\n- Orden: ${order.join(' ➔ ')}\n- Color Acento: ${accent}\n- Fondo: ${bg}`;
-            navigator.clipboard.writeText(summary);
-            alert('¡Configuración copiada al portapapeles!\nPuedes pegármela en el chat para dejarla fija.');
-        }
-
-        function resetStudioConfig() {
-            localStorage.removeItem('estima_order');
-            localStorage.removeItem('estima_accent');
-            localStorage.removeItem('estima_bg');
-            window.location.reload();
-        }
-
-        // Cargar preferencias guardadas si existen
-        document.addEventListener('DOMContentLoaded', () => {
-            loadOrderFromStorage();
-            const savedAccent = localStorage.getItem('estima_accent');
-            const savedBg = localStorage.getItem('estima_bg');
-            if (savedAccent) {
-                document.documentElement.style.setProperty('--accent-bronze', savedAccent);
-                const el = document.getElementById('pickerAccent');
-                if (el) el.value = savedAccent;
-            }
-            if (savedBg) {
-                document.documentElement.style.setProperty('--bg-canvas', savedBg);
-                const el = document.getElementById('pickerBg');
-                if (el) el.value = savedBg;
-            }
-        });
-    </script>
 
 </body>
 </html>
